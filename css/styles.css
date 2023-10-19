@@ -59,10 +59,11 @@ address {
 }
 
 .container {
-    width: 1158px;
+    max-width: 320px;
+    /* width: 1158px; */
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 /* === HEADER === */
@@ -117,6 +118,11 @@ address {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header-menu-link:hover,
+.header-menu-link:focus {
+    color: #404bbf;
+}
+
 .current {
     position: relative;
     color: #404BBF;
@@ -131,11 +137,6 @@ address {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-}
-
-.header-menu-link:hover,
-.header-menu-link:focus {
-    color: #404bbf;
 }
 
 .header-soc-net {}
@@ -220,48 +221,45 @@ address {
 /* === FEATURES === */
 
 .features {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 .features-container {}
 
 .features-list {
     display: flex;
-    gap: 24px;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .features-item {
-    width: calc((100% - 72px) / 4);
+    width: 100%;
 }
 
 .features-icon-container {
-    width: 264px;
-    height: 112px;
-    border-radius: 4px;
-    border: 1px solid #8E8F99;
-    background-color: #F4F4FD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
+    display: none;
 }
 
 .features-item-icon {}
 
 .features-subtitle {
     color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
     letter-spacing: 0.02em;
+    text-transform: capitalize;
     margin-bottom: 8px;
     display: flex;
 }
 
 .features-item-text {
     color: #434455;
-    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
@@ -272,11 +270,14 @@ address {
 
 .our-team {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
-.our-team-container {}
+.our-team-container {
+    padding-left: 28px;
+    padding-right: 28px;
+}
 
 .our-team-title {
     color: #2E2F42;
@@ -291,8 +292,8 @@ address {
 
 .our-team-list {
     display: flex;
-    gap: 24px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 72px;
 }
 
 .our-team-item {
@@ -300,12 +301,9 @@ address {
     border-radius: 4px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
-.our-team-images {
-    width: 100%;
-}
+.our-team-images {}
 
 .our-team-card {
     padding: 32px 0;
@@ -331,12 +329,11 @@ address {
     margin-bottom: 8px;
 }
 
-.third-section-svg-list {
+.our-team-svg-list {
     display: flex;
     gap: 24px;
     justify-content: center;
     align-items: center;
-    justify-content: center;
 }
 
 .our-team-svg-item {}
@@ -354,13 +351,13 @@ address {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.our-team-item-icon {
-    fill: #F4F4FD;
-}
-
 .our-team-icon-link:hover,
 .our-team-icon-link:focus {
     background-color: #404BBF;
+}
+
+.our-team-icon {
+    fill: #F4F4FD;
 }
 
 /* ====== */
@@ -405,12 +402,12 @@ address {
     transform: translateY(0%);
 }
 
-.our-portfolio-images {}
-
 .our-portfolio-wrap {
     position: relative;
     overflow: hidden;
 }
+
+.our-portfolio-images {}
 
 .our-portfolio-block-text {
     color: #F4F4FD;
@@ -723,6 +720,10 @@ address {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-textarea {
+    margin-bottom: 16px;
+}
+
 .modal-user-text {
     width: 100%;
     border-radius: 4px;
@@ -752,17 +753,13 @@ address {
     letter-spacing: 0.04em;
 }
 
-.modal-textarea {
-    margin-bottom: 16px;
-}
-
 .modal-check {
     margin-bottom: 24px;
 }
 
 .checkbox-input {}
 
-.text-checkbox {
+.label-checkbox {
     color: #8E8F99;
     font-size: 12px;
     font-weight: 400;
@@ -770,7 +767,7 @@ address {
     letter-spacing: 0.04em;
 }
 
-.text-checkbox a {
+.label-checkbox a {
     color: #4D5AE5;
     font-family: Roboto;
     font-size: 12px;
@@ -780,7 +777,7 @@ address {
     text-decoration-line: underline;
 }
 
-.checkbox-input:checked+.text-checkbox .span-checkbox {
+.checkbox-input:checked+.label-checkbox .span-checkbox {
     background-color: #404BBF;
     fill: #F4F4FD;
     border: none;
@@ -830,6 +827,115 @@ address {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+}
+
+/* ====== */
+
+/* === TABLET === */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .features-list {
+        gap: 72px 24px;
+    }
+
+    .features-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .features-icon-container {
+        display: none;
+    }
+
+    .our-team-container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+
+    .our-team-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 64px 24px;
+    }
+
+    .our-team-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+}
+
+/* ====== */
+
+/* === DEKSTOP === */
+
+@media screen and (min-width:1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .features {
+        padding: 120px 0;
+    }
+
+    .features-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .features-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .features-icon-container {
+        width: 264px;
+        height: 112px;
+        border-radius: 4px;
+        border: 1px solid #8E8F99;
+        background-color: #F4F4FD;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    .features-subtitle {
+        color: #2E2F42;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+
+    .features-item-text {
+        color: #434455;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
+    .our-team {
+        padding: 120px 0;
+    }
+
+    .our-team-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .our-team-item {
+        flex-basis: calc((100% - 3 * 24px) / 4);
+    }
 }
 
 /* ====== */
