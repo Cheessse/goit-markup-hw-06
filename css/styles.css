@@ -144,6 +144,10 @@ address {
     color: #404bbf;
 }
 
+.current {
+    color: #404BBF;
+}
+
 .mob-soc-list {}
 
 .mob-soc-item:not(:last-child) {
@@ -224,7 +228,7 @@ address {
 .header-soc-link {
     color: #434455;
     font-style: normal;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -334,6 +338,7 @@ address {
     text-transform: capitalize;
     margin-bottom: 8px;
     display: flex;
+    justify-content: center;
 }
 
 .features-item-text {
@@ -356,8 +361,7 @@ address {
 }
 
 .our-team-container {
-    padding-left: 28px;
-    padding-right: 28px;
+    width: 296px;
 }
 
 .our-team-title {
@@ -928,6 +932,7 @@ address {
     .header-soc-list {
         display: flex;
         flex-direction: column;
+        gap: 12px;
     }
 
 
@@ -989,8 +994,7 @@ address {
     }
 
     .our-team-container {
-        padding-left: 108px;
-        padding-right: 108px;
+        width: 584px;
     }
 
     .our-team-list {
@@ -1019,7 +1023,7 @@ address {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 528px;
+        width: 588px;
         gap: 72px 24px;
     }
 
@@ -1069,6 +1073,10 @@ address {
         display: flex;
         flex-direction: row;
         gap: 40px;
+    }
+
+    .header-soc-link {
+        font-size: 16px;
     }
 
     .hero {
@@ -1144,6 +1152,10 @@ address {
         padding: 120px 0;
     }
 
+    .our-team-container {
+        width: 1158px;
+    }
+
     .our-team-list {
         display: flex;
         gap: 24px;
@@ -1209,10 +1221,11 @@ address {
     }
 
     .footer-container {
-        width: 1125px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        gap: unset;
+        width: unset;
     }
 
     .footer-logo-p {
