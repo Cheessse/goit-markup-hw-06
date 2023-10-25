@@ -829,6 +829,8 @@ address {
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
 }
 
 .label-checkbox a {
@@ -859,6 +861,7 @@ address {
     margin-right: 8px;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
 }
 
 .modal-checkbox-icon {}
@@ -991,6 +994,10 @@ address {
 
     .features-icon-container {
         display: none;
+    }
+
+    .features-subtitle {
+        justify-content: flex-start;
     }
 
     .our-team-container {
@@ -1137,6 +1144,7 @@ address {
         font-weight: 500;
         line-height: 1.2;
         letter-spacing: 0.02em;
+        justify-content: flex-start;
     }
 
     .features-item-text {
